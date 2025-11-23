@@ -8,13 +8,13 @@ from mcp.client.stdio import stdio_client
 from rich import print as rprint
 
 model = GigaChat(model="GigaChat-2-Max",
-                credentials="NzMxZWJkNzktMDkwMy00ZTI2LWFiMGQtNmVjMjBjZmJmYWI2OjU0OGY2ZDI5LTM3ZmUtNGZhZS04MWY3LWY2YzkyNTc0YTU3Nw==",
+                credentials="",
                 verify_ssl_certs=False,
                 streaming=False,
                 max_tokens=8000,
                 timeout=600)
 
-#копипаста логгера из гайда
+#копипаст логгера из гайда
 def _log(ans):
     for message in ans['messages']:
         rprint(f"[{type(message).__name__}] {message.content} {getattr(message, 'tool_calls', '')}")
